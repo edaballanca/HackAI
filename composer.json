@@ -1,0 +1,17 @@
+{
+    "name": "lbalanca/html",
+    "autoload": {
+        "psr-4": {
+            "Lbalanca\\Html\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "edaballanca",
+            "email": "e.ballanca08@gmail.com"
+        }
+    ],
+    "require": {
+        "google/cloud-dialogflow": "^1.17"
+    }
+}

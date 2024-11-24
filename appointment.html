@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="appointment-container">
+        <div class="appointment-card">
+            <h1>Book an Appointment with a Lawyer</h1>
+            <form id="appointment-form" action="api.php?action=bookAppointment" method="POST">
+                <div class="input-group">
+                    <label for="lawyer">Choose a Lawyer:</label>
+                    <select id="lawyer" name="lawyer" required>
+                        <option value="">Select a lawyer</option>
+                        <!-- Lawyer options will be dynamically populated -->
+                    </select>
+                </div>
+        
+                <div class="input-group">
+                    <label for="slot">Choose a Time Slot:</label>
+                    <select id="slot" name="slot" required>
+                        <option value="">Select a time slot</option>
+                        <!-- Slot options will be dynamically populated -->
+                    </select>
+                </div>
+        
+                <div class="input-group">
+                    <label for="clientName">Your Name:</label>
+                    <input type="text" id="clientName" name="clientName" required>
+                </div>
+        
+                <div class="input-group">
+                    <label for="clientEmail">Your Email:</label>
+                    <input type="email" id="clientEmail" name="clientEmail" required>
+                </div>
+        
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+
+<style>
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(90deg, #001431 66%, #f8f2e2 61%);
+            color: #fff;
+        }
+
+        /* Centering container */
+        .appointment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Appointment card styling */
+        .appointment-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px 40px;
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            color: #333;
+        }
+
+        /* Title and subtitle */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #001431;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            background: #001431;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #001431, #6a11cb);
+        }
+
+        /* Optional: Add mobile responsiveness */
+        @media (max-width: 480px) {
+            .appointment-card {
+                width: 90%;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+
+</style>
